@@ -3,6 +3,7 @@ require_relative '../lib/game'
 require_relative '../lib/player'
 
 class MyApp < Sinatra::Base
+  enable :sessions
 
   set :views, Proc.new { File.join(root, "..","views") }
   # GAME = Game.new
@@ -18,8 +19,8 @@ class MyApp < Sinatra::Base
   post '/create_player' do
     player= Player.new
     @player_name = params[:player_name]
-    erb :welcome
-
+    p params
+    erb :play
   end
 
 

@@ -9,3 +9,8 @@ Scenario: Joining the game
   And Press the "play" button
   Then I should be taken to the game page
 
+Scenario: Playing the game
+  Given I have registered to play
+  When I choose "scissors"
+  Then I should see result
+
