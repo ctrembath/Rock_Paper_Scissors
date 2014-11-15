@@ -6,7 +6,7 @@ class MyApp < Sinatra::Base
   enable :sessions
 
   set :views, Proc.new { File.join(root, "..","views") }
-  # GAME = Game.new
+  GAME = Game.new
   get '/' do
     'rockpaperscissors!'
     erb :welcome
@@ -23,6 +23,11 @@ class MyApp < Sinatra::Base
     erb :play
   end
 
+  post '/play_game' do
+    @play =  params[:play]
+    p params
+    erb :results
+  end
 
 
   # start the server if ruby file executed directly
