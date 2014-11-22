@@ -12,5 +12,12 @@ Scenario: Joining the game
 Scenario: Playing the game
   Given I have registered to play
   When I choose "scissors"
-  Then I should see result
+  Then I should see results page
+
+Scenario: Displaying results
+  Given I am on results page
+  Then I should see my result
+  And the robots result
+  And see who is the winner
+  Then I should be able to press a button to invite me to play again
 

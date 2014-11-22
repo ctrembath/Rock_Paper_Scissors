@@ -25,5 +25,9 @@ When(/^I choose "(.*?)"$/) do |button_name|
 end
 
 Then(/^I should see result$/) do
-  expect(page).to have_content("results")
+  expect(page).to have_content("resultsa")
+end
+
+Then(/^I should see results page$/) do
+  expect(page).to have_content("resultsa")
 end
