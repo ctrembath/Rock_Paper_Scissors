@@ -25,5 +25,5 @@ When(/^I choose "(.*?)"$/) do |button_name|
 end
 
 Then(/^I should see result$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content("results")
 end

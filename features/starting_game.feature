@@ -1,7 +1,7 @@
 Feature: Starting the game
-In order to play rock,paper,scissors
-As a hot babe
-I want to start a new game
+  In order to play rock,paper,scissors
+  As a hot babe
+  I want to start a new game
 
 Scenario: Joining the game
   Given I am on the homepage

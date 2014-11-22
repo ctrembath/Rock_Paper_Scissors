@@ -1,4 +1,4 @@
-require 'player'
+require "player"
 
   describe Player do
 
@@ -11,19 +11,19 @@ require 'player'
     end
 
     it "can do rock" do
-      player.rock!
+      player.shoot
       expect(player.rock?).to be true
     end
 
     it "can do scissors" do
-      player.scissors!
+      player.shoot
       expect(player.scissors?).to be true
     end
 
 
     it "can do paper" do
-      player.scissors!
-      expect(player.scissors?).to be true
+      player.shoot
+      expect(player.paper?).to be true
     end
 end
 

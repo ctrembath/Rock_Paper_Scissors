@@ -2,6 +2,12 @@ class Player
   
   attr_accessor :name
 
+   def shoot
+    @rock = true
+    @scissors = true
+    @paper = true
+  end
+
    def rock!
     @rock = true
   end
