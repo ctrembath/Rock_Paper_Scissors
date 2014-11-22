@@ -16,7 +16,7 @@ Scenario: Playing the game
 
 Scenario: Displaying results
   Given I am on results page
-  Then I should see my result
+  And I should see my move
   And the robots result
   And see who is the winner
   Then I should be able to press a button to invite me to play again

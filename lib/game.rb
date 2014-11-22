@@ -1,6 +1,6 @@
 class Game
 
-  attr_accessor :player, :robot
+  attr_accessor :player, :shoot
 
   def initialize
     @player = nil
@@ -22,4 +22,15 @@ class Game
     move.sample
   end
 
+
+  RULES = {rock: :scissor, scissor: :paper, paper: :rock}
+  def results(player_move, robot_move)
+    self.robot_move
+
+    return "draw" if player_move == robot_move
+    return "win" if RULES[player_move]==robot_move
+  else "looser"
+    
+  end
+         
 end
