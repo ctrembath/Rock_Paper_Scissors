@@ -29,8 +29,8 @@ class Game
 
     return "draw" if player_move == robot_move
     return "win" if RULES[player_move]==robot_move
-  else "looser"
-    
+    else "looser"
+
   end
          
 end

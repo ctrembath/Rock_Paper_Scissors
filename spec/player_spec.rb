@@ -11,19 +11,16 @@ require "player"
     end
 
     it "can do rock" do
-      player.shoot
-      expect(player.rock?).to be true
+      expect(player.moves('rock')).to eq 'rock'
     end
 
     it "can do scissors" do
-      player.shoot
-      expect(player.scissors?).to be true
+      expect(player.moves('scissor')).to eq 'scissor'
     end
 
 
     it "can do paper" do
-      player.shoot
-      expect(player.paper?).to be true
+      expect(player.moves('paper')).to eq 'paper'
     end
 end
 

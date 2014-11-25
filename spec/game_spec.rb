@@ -15,10 +15,6 @@ describe Game do
 
   end
 
-  # it "same move results in draw" do
-  # expect(game.play("rock", "rock").to eq "draw"
-  # end
-
   it "the robot move is either - rock paper scissor" do
     expect(["rock","paper","scissor"]).to include(game.robot_move)
   end
@@ -40,6 +36,8 @@ describe Game do
     game.robot_move
     expect(game.results(:paper, :scissor)).to eq "looser"
   end
+
+
 
 end
 

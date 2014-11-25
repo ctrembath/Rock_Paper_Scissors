@@ -48,7 +48,7 @@ And(/^the robots result$/) do
 end
 
 And(/^see who is the winner$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(page).to have_content("the winner is")
 end
 
 Then(/^I should be able to press a button to invite me to play again$/) do

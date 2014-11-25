@@ -1,34 +1,10 @@
 class Player
   
   attr_accessor :name
+  attr_reader :move
 
-   def shoot
-    @rock = true
-    @scissors = true
-    @paper = true
+   def moves(move)
+    @move = move
   end
 
-   def rock!
-    @rock = true
-  end
-
-    def rock?
-      @rock
-    end
-
-  def scissors!
-    @scissors = true
-  end
-
-  def scissors?
-    @scissors
-  end
-
-  def paper!
-    @paper = true
-  end
-
-  def paper?
-    @paper
-  end
 end

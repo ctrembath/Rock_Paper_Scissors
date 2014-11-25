@@ -41,7 +41,7 @@ class MyApp < Sinatra::Base
   post '/play_game/results' do
     GAME.robot_move
     erb :result
-
+    
   end
 
 
