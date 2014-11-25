@@ -27,22 +27,11 @@ class MyApp < Sinatra::Base
   post '/play_game' do
     @player_name = session[:player_name]
     @play =  params[:play]
-    p params
+    @robot=GAME.robot_move
+    @result=GAME.results(@play, @robot)
     erb :results
   end
 
-  get '/play_game/results' do
-    @player_name = params[:player_name]
-    @robot_move = params[:robot_move]
-    erb :results
-  end
-
-  
-  post '/play_game/results' do
-    GAME.robot_move
-    erb :result
-    
-  end
 
 
   # start the server if ruby file executed directly

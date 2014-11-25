@@ -29,9 +29,9 @@ class Game
   def results(player_move, robot_move)
     return "draw" if player_move == robot_move
      if RULES[player_move]==robot_move
-      "win"
+      "YOU!"
     else 
-      "looser"
+      "teh r0b0t"
     end
    end
          
