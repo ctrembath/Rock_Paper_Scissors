@@ -1,4 +1,4 @@
-<h2> resultsa </h2>
+<center><h2> resultsa </h2>
 
 <%= @player_name %>
 
@@ -7,9 +7,10 @@
 
 <h3> Robot chose <%= @robot %> </h3>
 
-the winner is <%= @result %>
+ <%= @result %>
 
 
 play again.... ? 
-
-<button>
+<form action='/play' method='get'>
+<input type="submit" value="play">
+</form>

@@ -27,11 +27,11 @@ class Game
   RULES = {"rock" => "scissor", "scissor" => "paper", "paper" =>"rock"}
 
   def results(player_move, robot_move)
-    return "draw" if player_move == robot_move
+    return "draw!!!!" if player_move == robot_move
      if RULES[player_move]==robot_move
-      "YOU!"
+      "YOU win!"
     else 
-      "teh r0b0t"
+      "teh r0b0t haz won!"
     end
    end
          
