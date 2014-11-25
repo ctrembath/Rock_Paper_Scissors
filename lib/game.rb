@@ -1,6 +1,7 @@
 class Game
 
-  attr_accessor :player, :shoot
+  attr_accessor :player
+  attr_reader :moves
 
   def initialize
     @player = nil
@@ -23,14 +24,15 @@ class Game
   end
 
 
-  RULES = {rock: :scissor, scissor: :paper, paper: :rock}
+  RULES = {"rock" => "scissor", "scissor" => "paper", "paper" =>"rock"}
+
   def results(player_move, robot_move)
-    self.robot_move
-
     return "draw" if player_move == robot_move
-    return "win" if RULES[player_move]==robot_move
-    else "looser"
-
-  end
+     if RULES[player_move]==robot_move
+      "win"
+    else 
+      "looser"
+    end
+   end
          
 end

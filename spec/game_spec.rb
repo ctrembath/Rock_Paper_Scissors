@@ -3,7 +3,7 @@ require 'game'
 describe Game do
 
   let(:game) { Game.new }
-  let(:player) { double :player, move: :rock }
+  let(:player) { double :player }
 
   it "can have a player" do
     game.add_player(player)
@@ -24,19 +24,12 @@ describe Game do
   end
 
   it "prints out result win" do
-    game.add_player(player)
-    player.move
-    game.robot_move
-    expect(game.results(:rock, :scissor)).to eq "win"
+    expect(game.results("rock", "scissor")).to eq "win"
   end
 
   it "prints out looser" do
-    game.add_player(player)
-    player.move
-    game.robot_move
     expect(game.results(:paper, :scissor)).to eq "looser"
   end
-
 
 
 end
